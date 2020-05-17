@@ -1,0 +1,10 @@
+# Logs
+logs
+*.log
+
+#Connection
+db/*
+
+#librerias venv
+venv/*
+
