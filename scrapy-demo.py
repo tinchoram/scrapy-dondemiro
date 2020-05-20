@@ -1,9 +1,9 @@
 ##############################################
 # Scrapy Demo - Tinchoram.com/dondemiro
-# Version: 1.0.0
+# Version: 1.1.0
 # By: @Tinchoram
 # CodeSource: https://github.com/tinchoram/scrapy-dondemiro
-# Date: 2020-05-17
+# Date: 2020-05-19
 ##############################################
 
 import requests
@@ -52,6 +52,7 @@ def getGenero(url,data):
         print('Error get genero: {}'.format(e))
         return None
 
+###get each movie link
 def GetListFilms(url,dic_genero):
     try:
         ##Total page for scrapy
