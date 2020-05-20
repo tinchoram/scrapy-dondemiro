@@ -10,7 +10,7 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import re
-
+import time 
 
 ############# START FUNCTIONS ####################
 
@@ -54,7 +54,6 @@ def getGenero(url,data):
 
 def GetListFilms(url,dic_genero):
     try:
-        dic_films = {}
         ##Total page for scrapy
         ##Total de paginas a Scrypear
         totalpage = 2
@@ -78,9 +77,12 @@ def GetListFilms(url,dic_genero):
                     print('---URL-IMG:' + str(urlimg))
                     link=movie.find('a').get('href')
                     print('---URL-link:' + str(link))
-                    print('-------------------------------------------------')
-
-
+                    print('-----------------------------------------------------')
+                    
+                    print('---------------------sleep one-----------------------')
+                    #Time sleep between request
+                    #Tiempo entre descarga
+                    time.sleep(1)
 
                 #print(soup)
 
